@@ -1,11 +1,10 @@
 @echo off
 docker kill $(docker ps -q)
 if exist .\api-docker (
-  echo Yes 
     cd .\api-docker
     git pull
 ) else (
-    git clone https://github.com/Mario-35/api-sensorthing.git 
+    git clone https://github.com/Mario-35/api-docker 
     cd .\api-docker
 )
 
