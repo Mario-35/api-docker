@@ -15,6 +15,7 @@ const writeToLog = async (ctx) => {
             await db_1.db.table(index_1._DBDATAS.Logs_request.table).insert(ctx.LOG);
         }
         catch (error) {
+            console.log(ctx.LOG);
             console.log(error);
         }
     }

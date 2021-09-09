@@ -51,6 +51,7 @@ require("./auth");
 app.use(auth_1.default);
 app.use(all_1.default);
 const showMessages = (mode) => {
+    if (mode) {
         (0, utils_1.message)("HEAD", "env", process.env.NODE_ENV);
         (0, utils_1.message)("ENV", "Host", process.env.PGHOST);
         (0, utils_1.message)("ENV", "Database", process.env.PGDATABASE);
@@ -58,7 +59,7 @@ const showMessages = (mode) => {
         (0, utils_1.message)("ENV", "Port", process.env.PGPORT);
         (0, utils_1.message)("ENV", "User", process.env.PGUSER);
         (0, utils_1.message)("ENV", "Listen port", process.env.PORT);
-    
+    }
 };
 exports.server = app.listen(process.env.PORT, async () => {
     if (!constants_1.isTest) {

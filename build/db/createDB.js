@@ -16,8 +16,7 @@ const admin = () => {
             host: process.env.PGHOST,
             user: "postgres",
             password: process.env.PGADMIN,
-            database: "postgres",
-            port: Number(process.env.PGPORT)
+            database: "postgres"
         },
         pool: {
             min: 0,
