@@ -1,18 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.createFilter = exports.createQuery = void 0;
-const visitor_1 = require("./visitor");
-const odata_v4_sql_1 = require("odata-v4-sql");
-const odata_v4_parser_1 = require("odata-v4-parser");
-function createQuery(odataQuery, options = {}) {
-    options.type = odata_v4_sql_1.SQLLang.PostgreSql;
-    const ast = (typeof odataQuery == "string" ? (0, odata_v4_parser_1.query)(odataQuery.trim()) : odataQuery);
-    return new visitor_1.PGVisitor(options).Visit(ast).asType();
-}
-exports.createQuery = createQuery;
-function createFilter(odataFilter, options = {}) {
-    options.type = odata_v4_sql_1.SQLLang.PostgreSql;
-    const ast = (typeof odataFilter == "string" ? (0, odata_v4_parser_1.filter)(odataFilter) : odataFilter);
-    return new visitor_1.PGVisitor(options).Visit(ast).asType();
-}
-exports.createFilter = createFilter;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.createFilter=exports.createQuery=void 0;const visitor_1=require("./visitor"),odata_v4_sql_1=require("odata-v4-sql"),odata_v4_parser_1=require("odata-v4-parser");function createQuery(e,r={}){r.type=odata_v4_sql_1.SQLLang.PostgreSql;const t="string"==typeof e?(0,odata_v4_parser_1.query)(e.trim()):e;return new visitor_1.PGVisitor(r).Visit(t).asType()}function createFilter(e,r={}){r.type=odata_v4_sql_1.SQLLang.PostgreSql;const t="string"==typeof e?(0,odata_v4_parser_1.filter)(e):e;return new visitor_1.PGVisitor(r).Visit(t).asType()}exports.createQuery=createQuery,exports.createFilter=createFilter;

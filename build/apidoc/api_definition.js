@@ -1,1 +1,1 @@
-define({ "api": undefined });
+define({api:void 0});

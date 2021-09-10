@@ -1,10 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Datastreams = void 0;
-const common_1 = require("./common");
-class Datastreams extends common_1.Common {
-    constructor(ctx, args, level, knexInstance) {
-        super(ctx, args, knexInstance);
-    }
-}
-exports.Datastreams = Datastreams;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Datastreams=void 0;const common_1=require("./common");class Datastreams extends common_1.Common{constructor(e,s,t,o){super(e,s,o)}}exports.Datastreams=Datastreams;

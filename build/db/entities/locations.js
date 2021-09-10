@@ -1,10 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Locations = void 0;
-const common_1 = require("./common");
-class Locations extends common_1.Common {
-    constructor(ctx, args, level, knexInstance) {
-        super(ctx, args, knexInstance);
-    }
-}
-exports.Locations = Locations;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.Locations=void 0;const common_1=require("./common");class Locations extends common_1.Common{constructor(o,e,s,t){super(o,e,t)}}exports.Locations=Locations;

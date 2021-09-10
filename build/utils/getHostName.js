@@ -1,7 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.getHostName = void 0;
-const getHostName = (ctx) => {
-    return ctx.request.headers["x-forwarded-host"] ? ctx.request.headers["x-forwarded-host"][0] : ctx.request.header.host ? ctx.request.header.host : "";
-};
-exports.getHostName = getHostName;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.getHostName=void 0;const getHostName=e=>e.request.headers["x-forwarded-host"]?e.request.headers["x-forwarded-host"][0]:e.request.header.host?e.request.header.host:"";exports.getHostName=getHostName;

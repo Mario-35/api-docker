@@ -1,8 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.extractMessageError = void 0;
-const extractMessageError = (input) => {
-    const temp = input.split("-");
-    return input.length === 0 ? input : temp[temp.length - 1].trim();
-};
-exports.extractMessageError = extractMessageError;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.extractMessageError=void 0;const extractMessageError=e=>{const r=e.split("-");return 0===e.length?e:r[r.length-1].trim()};exports.extractMessageError=extractMessageError;

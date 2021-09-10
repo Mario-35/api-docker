@@ -1,9 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.asyncForEach = void 0;
-async function asyncForEach(array, callback) {
-    for (let index = 0; index < array.length; index++) {
-        await callback(array[index], index, array);
-    }
-}
-exports.asyncForEach = asyncForEach;
+"use strict";async function asyncForEach(e,a){for(let c=0;c<e.length;c++)await a(e[c],c,e)}Object.defineProperty(exports,"__esModule",{value:!0}),exports.asyncForEach=void 0,exports.asyncForEach=asyncForEach;

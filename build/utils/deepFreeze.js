@@ -1,12 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.deepFreeze = void 0;
-const deepFreeze = (obj) => {
-    const propNames = Object.getOwnPropertyNames(obj);
-    for (const name of propNames) {
-        const value = obj[name];
-        obj[name] = value && typeof value === "object" ? (0, exports.deepFreeze)(value) : value;
-    }
-    return Object.freeze(obj);
-};
-exports.deepFreeze = deepFreeze;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.deepFreeze=void 0;const deepFreeze=e=>{const t=Object.getOwnPropertyNames(e);for(const r of t){const t=e[r];e[r]=t&&"object"==typeof t?(0,exports.deepFreeze)(t):t}return Object.freeze(e)};exports.deepFreeze=deepFreeze;

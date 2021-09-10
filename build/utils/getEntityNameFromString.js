@@ -1,17 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.getEntityNameFromString = void 0;
-const constants_1 = require("../constants");
-const getEntityNameFromString = (input) => {
-    var _a;
-    const test = (_a = input
-        .replace("Create", "")
-        .match(/[a-zA-Z]/g)) === null || _a === void 0 ? void 0 : _a.join("").trim();
-    if (test !== undefined) {
-        return constants_1._DBDATAS.hasOwnProperty(test)
-            ? test
-            : Object.keys(constants_1._DBDATAS).filter((elem) => constants_1._DBDATAS[elem].name.toUpperCase() == test.toUpperCase() || constants_1._DBDATAS[elem].singular.toUpperCase() == test.toUpperCase())[0];
-    }
-    return undefined;
-};
-exports.getEntityNameFromString = getEntityNameFromString;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.getEntityNameFromString=void 0;const constants_1=require("../constants"),getEntityNameFromString=t=>{var e;const r=null===(e=t.replace("Create","").match(/[a-zA-Z]/g))||void 0===e?void 0:e.join("").trim();if(void 0!==r)return constants_1._DBDATAS.hasOwnProperty(r)?r:Object.keys(constants_1._DBDATAS).filter(t=>constants_1._DBDATAS[t].name.toUpperCase()==r.toUpperCase()||constants_1._DBDATAS[t].singular.toUpperCase()==r.toUpperCase())[0]};exports.getEntityNameFromString=getEntityNameFromString;

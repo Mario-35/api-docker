@@ -1,9 +1,1 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.addToLog = void 0;
-const addToLog = (ctx, key, value) => {
-    if (!ctx["LOG"])
-        ctx["LOG"] = {};
-    ctx["LOG"][key] = value;
-};
-exports.addToLog = addToLog;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.addToLog=void 0;const addToLog=(o,d,e)=>{o.LOG||(o.LOG={}),o.LOG[d]=e};exports.addToLog=addToLog;
